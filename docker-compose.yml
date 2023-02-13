@@ -1,0 +1,12 @@
+version: '3'
+services:
+  ping:
+    image: ping
+    container_name: ping
+    ports:
+      - 5000:5000
+  pong:
+    image: pong
+    container_name: pong
+    depends_on:
+      - ping
